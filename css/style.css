@@ -4,9 +4,9 @@
     margin: 0;
 }
 body{
-    background: url(../img/bg.jpg) no-repeat;
+    background: url(../img/bg2.png) no-repeat;
     min-height: 100vh;
-    background-size: 100vw 110vh;
+    background-size: 100vw 130vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,7 @@ body{
     position: absolute;
     top:9px;
     right: 10px;
+    color: white;
     font-size: 39px;
     font-weight: bold;
     font-family: "New Tegomin", serif;
@@ -24,6 +25,7 @@ body{
 #hiScoreBox{
     position: absolute;
     top:59px;
+    color: white;
     right: 10px;
     font-size: 39px;
     font-weight: bold;
@@ -31,7 +33,7 @@ body{
 }
 
 #board{
-    background: linear-gradient(rgb(178, 226, 178),rgb(228, 228, 170));
+    background: linear-gradient(rgb(30, 111, 30),rgb(160, 160, 25));
     width: 90vmin;
     height: 80vmin;
     border: 2px solid black;
@@ -66,17 +68,17 @@ body{
 
 }
 .control-button {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 2px;
     background-color: rgb(20, 186, 86);
     border: 1px solid rgb(17, 8, 8);
     border-radius: 25%;
     font-size: 18px;
     margin: auto;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 #left{
     grid-column-start: 1;
@@ -104,7 +106,7 @@ body{
         top:50px;
     }
 }
-@media (max-width: 850px) {
+@media (min-width:250px) and (max-width: 850px){
     #scoreBox {
         font-size: 20px;
         top:20px;
@@ -116,6 +118,15 @@ body{
     .control-button {
         width: 60px;
         height: 60px;
-        
+    }
 }
+@media (max-width:250px){
+    #scoreBox {
+        font-size: 15px;
+        top:20px;
+    }
+    #hiScoreBox {
+        font-size: 15px;
+        top:40px;
+    }
 }
