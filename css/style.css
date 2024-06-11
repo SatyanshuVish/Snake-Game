@@ -114,9 +114,7 @@ body{
         top:40px;
     }
     .control-button {
-    width: 60px;
-    height: 60px;
-    margin: 2px;
-    
+        width: 60px;
+        height: 60px;
 }
 }
