@@ -164,9 +164,12 @@ window.addEventListener('keydown',e=>{
 
 });
 window.addEventListener('click', (event) => {
-    inputDir={x:0, y:0}// Game Start
+    
     moveSound.play();
     const targetId = event.target.id;
+    if(targetId==="up"||targetId ==="down"||targetId==="left"||targetId==="right"){
+        inputDir=inputDir={x:0, y:0};
+    }
     switch (targetId) {
         case "up":
             inputDir.x=0;
