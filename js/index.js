@@ -3,8 +3,9 @@ let inputDir = {x:0,y:0};
 const foodSound = new Audio('music/food.mp3');
 const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3');
-const musicSound = new Audio('music/usic.mp3');// Purposely given typo in file name 
-let speed=10;
+let musicSound = new Audio('music/usic.mp3');
+
+let speed = 20;
 function sliderChange(val) {
     document.getElementById('sliderValue').innerHTML = val;
     speed=val;
@@ -49,18 +50,21 @@ function isCollide(snake) {
     }
 }
 
+
+
 function gameEngine(){
-    musicSound.play();
     // Part 1 : Updating the snake array and food
+    musicSound.play();
     if(isCollide(snakeArr)){
         gameOverSound.play();
         musicSound.pause();
         inputDir={x:0,y:0};
-       // alert("Game over. Press any key to play again!");
+        //alert("Game over. Press any key to play again!");
         snakeArr=[{x:13,y:15}];
         musicSound.play();
         score=0;
         scoreBox.innerHTML="Score : "+score;
+        updateSpeedValue();
     }
 
     // Is snake eats food,increase score and regenerate food.
