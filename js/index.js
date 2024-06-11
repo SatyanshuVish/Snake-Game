@@ -9,6 +9,14 @@ function sliderChange(val) {
     document.getElementById('sliderValue').innerHTML = val;
     speed=val;
 }
+function musicOn(){
+    if (document.getElementById('Music').checked) {
+        musicSound = new Audio('music/music.mp3');
+    }else{
+        musicSound.pause();
+        musicSound = new Audio('music/usic.mp3'); 
+    }
+}
 let score=0;
 let lastPaintTime=0;
 let snakeArr=[
@@ -42,6 +50,7 @@ function isCollide(snake) {
 }
 
 function gameEngine(){
+    musicSound.play();
     // Part 1 : Updating the snake array and food
     if(isCollide(snakeArr)){
         gameOverSound.play();
