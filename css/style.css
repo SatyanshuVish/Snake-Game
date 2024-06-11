@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    min-height: 100vh;
+    background-size: 100vw 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top:9px;
+    right: 10px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+}
+
+#hiScoreBox{
+    position: absolute;
+    top:59px;
+    right: 10px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+}
+
+#board{
+    background: linear-gradient(rgb(178, 226, 178),rgb(228, 228, 170));
+    width: 90vmin;
+    height: 80vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+}
+
+.head{
+    background:linear-gradient(rgb(230, 129, 161),rgb(229, 229, 70));
+    border:2px solid rgb(26, 1, 40);
+    transform:scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red,purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
+.controls {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+.control-button {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: rgb(20, 186, 86);
+    border: 1px solid rgb(17, 8, 8);
+    border-radius: 25%;
+    font-size: 18px;
+    margin: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#left{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+#right{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+#up{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+#down{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+@media (max-width: 1000px) {
+    #scoreBox {
+        font-size: 30px;
+        top:20px;
+    }
+    #hiScoreBox {
+        font-size: 30px;
+        top:50px;
+    }
+}
+@media (max-width: 850px) {
+    #scoreBox {
+        font-size: 20px;
+        top:20px;
+    }
+    #hiScoreBox {
+        font-size: 20px;
+        top:40px;
+    }
+}
