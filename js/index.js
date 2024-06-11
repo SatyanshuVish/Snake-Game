@@ -131,7 +131,7 @@ if(hiScore===null){
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown',e=>{
-    inputDir={x:0, y:-1}// Game Start
+    inputDir={x:0, y:0}// Game Start
     moveSound.play();
     switch (e.key) {
         case "ArrowUp":
@@ -164,8 +164,8 @@ window.addEventListener('keydown',e=>{
 
 });
 window.addEventListener('click', (event) => {
-    inputDir={x:0, y:-1}// Game Start
-   moveSound.play();
+    inputDir={x:0, y:0}// Game Start
+    moveSound.play();
     const targetId = event.target.id;
     switch (targetId) {
         case "up":
