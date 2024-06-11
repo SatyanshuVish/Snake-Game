@@ -74,9 +74,9 @@ body{
     border-radius: 25%;
     font-size: 18px;
     margin: auto;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 #left{
     grid-column-start: 1;
@@ -113,4 +113,10 @@ body{
         font-size: 20px;
         top:40px;
     }
+    .control-button {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    
+}
 }
