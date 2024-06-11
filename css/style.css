@@ -80,6 +80,19 @@ body{
     align-items: center;
     justify-content: center; */
 }
+.slider{
+    width: 100px;
+}
+
+#speedBox{
+    position: absolute;
+    top:40px;
+    color: white;
+    left: 10px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+}
 #left{
     grid-column-start: 1;
     grid-row-start: 2;
@@ -105,6 +118,12 @@ body{
         font-size: 30px;
         top:50px;
     }
+    #speedBox{
+        top:40px;
+        left: 10px;
+        font-size: 30px;
+        
+    }
 }
 @media (min-width:250px) and (max-width: 850px){
     #scoreBox {
@@ -119,6 +138,11 @@ body{
         width: 60px;
         height: 60px;
     }
+    #speedBox{
+        top:20px;
+        left: 10px;
+        font-size: 20px;
+    }
 }
 @media (max-width:250px){
     #scoreBox {
@@ -128,5 +152,13 @@ body{
     #hiScoreBox {
         font-size: 15px;
         top:40px;
+    }
+    #speedBox{
+        top:20px;
+        left: 10px;
+        font-size: 15px;
+    }
+    .slider{
+        width: 50px;
     }
 }
