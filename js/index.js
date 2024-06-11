@@ -5,6 +5,10 @@ const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3');
 const musicSound = new Audio('music/music.mp3');
 let speed=10;
+function sliderChange(val) {
+    document.getElementById('sliderValue').innerHTML = val;
+    speed=val;
+}
 let score=0;
 let lastPaintTime=0;
 let snakeArr=[
